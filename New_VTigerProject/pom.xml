@@ -3,79 +3,64 @@
   <groupId>New_VTigerProject</groupId>
   <artifactId>New_VTigerProject</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-<description>			</description>
-   <dependencies>
-        <!-- Selenium Java Dependency -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>4.18.1</version>
-        </dependency>
-        
-        <!-- MySQL Connector Java Dependency -->
-        <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <version>8.3.0</version>
-        </dependency>
+  <description></description>
+  
+  <dependencies>
+    <!-- Selenium Java Dependency -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>4.18.1</version>
+    </dependency>
 
-        <!-- Apache POI Dependency for Excel -->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>5.2.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>5.2.3</version>
-        </dependency>
+    <!-- MySQL Connector Java Dependency -->
+    <dependency>
+      <groupId>com.mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
+      <version>8.3.0</version>
+    </dependency>
 
-        <!-- TestNG Dependency -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.7.1</version>
-        </dependency>
+    <!-- Apache POI Dependency for Excel -->
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>5.2.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>5.2.3</version>
+    </dependency>
 
-        <!-- ExtentReports Dependency -->
-        <dependency>
-            <groupId>com.aventstack</groupId>
-            <artifactId>extentreports</artifactId>
-            <version>5.0.9</version>
-        </dependency>
-        
+    <!-- TestNG Dependency -->
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>7.7.1</version>
+    </dependency>
 
-       
+    <!-- ExtentReports Dependency -->
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>5.0.9</version>
+    </dependency>
   </dependencies>
   
-  
   <build>
-		<plugins>
-			<!-- Compiler plug-in -->
-		<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <version>3.0.0-M7</version> <!-- or latest version -->
-    <configuration>
-        <suiteXmlFiles>
+    <plugins>
+      <!-- Maven Surefire Plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M7</version> <!-- Latest stable version -->
+        <configuration>
+          <suiteXmlFiles>
             <suiteXmlFile>testng_RT.xml</suiteXmlFile>
-        </suiteXmlFiles>	
-    </configuration>
-</plugin>
-			<!-- Below plug-in is used to execute tests -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.18.1</version>
-				<configuration>
-					<suiteXmlFiles>
-						<!-- TestNG suite XML files -->
-						<suiteXmlFile>testng_ST.xml</suiteXmlFile>
-					</suiteXmlFiles>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-  
+            <suiteXmlFile>testng_ST.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
